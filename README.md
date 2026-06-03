@@ -48,7 +48,7 @@ FURAI uses a proximity model — three degrees of closeness with the archive:
 |**SIGNAL** |9 USDT/mo |80 transmissions|Full profile + interests|✓      |—                                  |
 |**ARCHIVE**|20 USDT/mo|Unlimited       |Full persistent memory  |✓      |Deep vector search + session recall|
 
-Payment via USDT (TRC-20). Access activates within ~1 hour after confirmation.
+Payment via USDT (TRC-20). Access activates automatically after on-chain verification.
 
 -----
 
