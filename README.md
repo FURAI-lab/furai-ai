@@ -75,19 +75,33 @@ No external databases. No third-party AI APIs. Full stack on Cloudflare edge.
 This repository contains the **public interface layer** of FURAI.
 
 ├── src/
+
 │   ├── index.ts                       — worker entry point, routing, AI orchestration
+
 │   └── lib/
+
 │       ├── detect.ts                  — entity detection and forced-reply builders
+
 │       ├── payment.ts                 — USDT payment pipeline and route handlers
+
 │       ├── lore/
+
 │       │   ├── velorum.ts             — ambient fragments, cosmic events, known systems
+
 │       │   ├── characters.ts          — Anantari echoes, character lore hooks (EN/RU)
+
 │       │   ├── anantari.ts            — builders, language, routes, threat hooks (EN/RU)
+
 │       │   └── index.ts               — barrel export
+
 │       └── content.ts                 — re-export shim (backwards compatibility)
+
 └── ui/
+
 ├── render.ts                      — welcome, proximity, and terminal HTML renderers
+
 ├── script.ts                      — client-side terminal behavior, meditation mode, visuals
+
 └── styles.ts                      — visual system and terminal styling
 
 **Not included in this repository:**
