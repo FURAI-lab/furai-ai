@@ -74,16 +74,21 @@ No external databases. No third-party AI APIs. Full stack on Cloudflare edge.
 
 This repository contains the **public interface layer** of FURAI.
 
-```
-.
-├── ui.ts                              — public UI entry point
-├── lib/
-│   └── officialPortraits.generated.ts — canonical character portrait data
+├── src/
+│   ├── index.ts                       — worker entry point, routing, AI orchestration
+│   └── lib/
+│       ├── detect.ts                  — entity detection and forced-reply builders
+│       ├── payment.ts                 — USDT payment pipeline and route handlers
+│       ├── lore/
+│       │   ├── velorum.ts             — ambient fragments, cosmic events, known systems
+│       │   ├── characters.ts          — Anantari echoes, character lore hooks (EN/RU)
+│       │   ├── anantari.ts            — builders, language, routes, threat hooks (EN/RU)
+│       │   └── index.ts               — barrel export
+│       └── content.ts                 — re-export shim (backwards compatibility)
 └── ui/
-    ├── render.ts                      — welcome, proximity, and terminal HTML renderers
-    ├── script.ts                      — client-side terminal behavior, meditation mode, visuals
-    └── styles.ts                      — visual system and terminal styling
-```
+├── render.ts                      — welcome, proximity, and terminal HTML renderers
+├── script.ts                      — client-side terminal behavior, meditation mode, visuals
+└── styles.ts                      — visual system and terminal styling
 
 **Not included in this repository:**
 
@@ -99,13 +104,13 @@ This repository contains the **public interface layer** of FURAI.
 
 |Phase                   |Status   |Description                                                             |
 |------------------------|---------|------------------------------------------------------------------------|
-|Terminal presence       |✅ Live   |Amber terminal, lore visuals, meditation mode, visitor continuity       |
-|Traveler arc system     |✅ Live   |Archetype tracking, arc stages, repeat-visit rhythm                     |
-|Vector archive memory   |✅ Live   |Semantic retrieval from Velorum’s accumulated archive                   |
-|Tiered access + payments|✅ Live   |DRIFT / SIGNAL / ARCHIVE with USDT payment pipeline                     |
-|Deep archive resonance  |✅ Live   |Long-horizon memory shaped by Velorum’s full drift history              |
-|Archive expansion       |📋 Planned|Deeper lore, new characters, extended Anantari civilization records     |
-|Hono migration          |📋 Planned|Migrate routing layer to Hono for cleaner middleware and maintainability|
+|Terminal presence       |✅ Live       |Amber terminal, lore visuals, meditation mode, visitor continuity       |
+|Traveler arc system     |✅ Live       |Archetype tracking, arc stages, repeat-visit rhythm                     |
+|Vector archive memory   |✅ Live       |Semantic retrieval from Velorum’s accumulated archive                   |
+|Tiered access + payments|✅ Live       |DRIFT / SIGNAL / ARCHIVE with USDT payment pipeline                     |
+|Deep archive resonance  |✅ Live       |Long-horizon memory shaped by Velorum’s full drift history              |
+|Archive expansion       |🔄 In progress|Deeper lore, new characters, extended Anantari civilization records     |
+|Hono migration          |📋 Planned    |Migrate routing layer to Hono for cleaner middleware and maintainability|
 
 -----
 
