@@ -74,6 +74,7 @@ No external databases. No third-party AI APIs. Full stack on Cloudflare edge.
 
 This repository contains the **public interface layer** of FURAI.
 
+```
 .
 ├── src/
 │   ├── index.ts                       — worker entry point, routing, AI orchestration
@@ -90,6 +91,7 @@ This repository contains the **public interface layer** of FURAI.
     ├── render.ts                      — welcome, proximity, and terminal HTML renderers
     ├── script.ts                      — client-side terminal behavior, meditation mode, visuals
     └── styles.ts                      — visual system and terminal styling
+```
 
 **Not included in this repository:**
 
